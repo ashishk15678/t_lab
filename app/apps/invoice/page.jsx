@@ -213,32 +213,6 @@ export default function Page() {
                             <AllItems />
 
 
-                            <div className="flex flex-row">
-                                <button className="px-6 py-2 bg-green-500 text-white w-[250px]
-                                print:hidden"
-                                    onClick={() => {
-
-                                        // showing body
-                                        // document.getElementById("warn").classList.remove("print:flex")
-                                        // document.getElementById("warn").classList.add("print:hidden")
-                                        // document.getElementById("mainParent").classList.remove("print:hidden")
-
-                                        //print
-                                        window.print()
-
-                                        //hiding body
-                                        // document.getElementById("warn").classList.add("print:flex")
-                                        // document.getElementById("warn").classList.remove("print:hidden")
-                                        // document.getElementById("mainParent").classList.add("print:hidden")
-
-                                    }}>Download</button>
-
-                                <button className="px-6 py-2 bg-green-500 text-white w-[250px] ml-8
-                                print:hidden" onClick={() => {
-                                        document.getElementById("amountlabel").innerText = "Amount"
-                                    }}>Amount</button>
-
-                            </div>
                         </div>
                     </div>
                 </div>

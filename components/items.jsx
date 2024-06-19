@@ -8,7 +8,7 @@ export default function Items({ id, description, qty, rate, arr }) {
     const [Qty, setQty] = useState(qty)
     const [Rate, setRate] = useState(rate)
 
-    console.log(arr);
+    // console.log(arr);
     return (
         <>
             <div className="mt-1 w-full lg:text-xl md:text-md text-sm font-serif border-2 border-gray-300
@@ -26,7 +26,8 @@ export default function Items({ id, description, qty, rate, arr }) {
                          ml-[5px] bg-slate-200/60 print:ml-[120px] print:bg-none"
                             placeholder="Item Description"
                             onChange={(e) => {
-                                arr.description = e.target.value
+                                // console.info(" description at id : ", id, " is ", arr[id - 1])
+                                arr[id - 1].description = e.target.value
                                 setDescription(e.target.value)
 
                             }}
@@ -38,6 +39,9 @@ export default function Items({ id, description, qty, rate, arr }) {
  md:ml-[76px]                        print:ml-[150px] ml-[20px] bg-slate-200/60 bg-none"
                             onChange={(e) => {
                                 setRate(e.target.value)
+                                arr[id - 1].rate = e.target.value
+                                // console.info(" Rate at id : ", id, " is ", arr[id - 1].rate)
+
                             }}
 
                         />
@@ -48,6 +52,8 @@ export default function Items({ id, description, qty, rate, arr }) {
                         print:ml-[10px] ml-[10px] bg-slate-200/60 print:bg-none"
                             onChange={(e) => {
                                 setQty(e.target.value)
+                                arr[id - 1].qty = e.target.value
+
                             }}
                         />
 
@@ -69,12 +75,15 @@ export function AllItems({ }) {
     let amount = 0
 
 
-    const arr = [{
+    // let arr = [{
+    //     id: 1, description: "", qty: 0, rate: 0, key: count,
+    // }
+    // ]
+
+    const [items, setItems] = useState([{
         id: 1, description: "", qty: 0, rate: 0, key: count,
     }
-    ]
-
-    const [items, setItems] = useState(arr)
+    ])
 
     return (<>
         <div>
@@ -82,7 +91,7 @@ export function AllItems({ }) {
             {items.map((i) => {
                 return (
                     <>
-                        <Items id={i.id} description={i.description} qty={i.qty} arr={arr}
+                        <Items id={i.id} description={i.description} qty={i.qty} arr={items}
                             rate={i.rate} key={count} />
                     </>
                 )
@@ -92,11 +101,12 @@ export function AllItems({ }) {
             <button className="w-8 h-8  bg-green-400 text-white text-3xl rounded-sm flex items-center   
                                 justify-center print:hidden ml-12"
                 onClick={() => {
+                    // arr = arr.concat({ id: count + 1, description: "", qty: 0, rate: 0 })
                     setItems(items.concat({ id: count + 1, description: "", qty: 0, rate: 0 }))
                     setCount(count + 1)
                 }}
             >+</button>
-        </div>
+        </div >
 
         <div className="h-1 w-full bg-gray-200 
         print:bg-none    mt-2 text-gray-500 "></div>
@@ -106,11 +116,39 @@ export function AllItems({ }) {
                 <label id="amountlabel"></label>
             </label>
             <br />
+
             <label htmlFor="Discount" className=" text-xl font-extrabold ">Discount</label>
             <input type="text" accept="number" id="Discount" className="text-xl font-bold
                                 ml-10   border-1 border-gray-400 rounded-md  p-2"
                 placeholder="Discount percentage" />
         </div>
+        <div className="flex flex-row">
+            <button className="px-6 py-2 bg-green-500 text-white w-[250px]
+                                print:hidden"
+                onClick={() => {
+
+                    // showing body
+                    // document.getElementById("warn").classList.remove("print:flex")
+                    // document.getElementById("warn").classList.add("print:hidden")
+                    // document.getElementById("mainParent").classList.remove("print:hidden")
+
+                    //print
+                    window.print()
+
+                    //hiding body
+                    // document.getElementById("warn").classList.add("print:flex")
+                    // document.getElementById("warn").classList.remove("print:hidden")
+                    // document.getElementById("mainParent").classList.add("print:hidden")
+
+                }}>Download</button>
+
+            <button className="px-6 py-2 bg-green-500 text-white w-[250px] ml-8
+                                print:hidden" onClick={() => {
+                    document.getElementById("amountlabel").innerText = "Amount"
+                }}>Amount</button>
+
+        </div>
+
     </>
     )
 }
