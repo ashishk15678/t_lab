@@ -20,7 +20,7 @@ export default function Page() {
     //console.log(image)
     useEffect(() => {
         const val = window.localStorage.getItem("img")
-        console.log("FROM USEFFECT : ", val)
+        //console.log("FROM USEFFECT : ", val)
         if (val) {
             setImage(`data:image/jpeg;base64,${val}`)
         }
@@ -61,12 +61,12 @@ export default function Page() {
                                     const reader = new FileReader()
                                     setImage(reader.readAsDataURL(file))
                                     reader.onloadend = () => {
-                                        console.log("INSIDE READER")
+                                        //console.log("INSIDE READER")
                                         const base64 = reader.result.replace('data:', '').replace(/^.+,/, '');
                                         window.localStorage.setItem("img", base64)
-                                        console.log("READER RESULT : ", reader.result, " And Image is ", base64)
+                                        //console.log("READER RESULT : ", reader.result, " And Image is ", base64)
                                         setImage(`data:image/jpeg;base64,${base64}`)
-                                        console.log(image)
+                                        //console.log(image)
                                     }
 
                                 }} />
@@ -212,15 +212,31 @@ export default function Page() {
                             <AllItems />
 
 
-                            <div className="">
+                            <div className="flex flex-row">
                                 <button className="px-6 py-2 bg-green-500 text-white w-[250px]
                                 print:hidden"
                                     onClick={() => {
+
+                                        // showing body
                                         document.getElementById("warn").classList.remove("print:flex")
                                         document.getElementById("warn").classList.add("print:hidden")
                                         document.getElementById("mainParent").classList.remove("print:hidden")
+
+                                        //print
                                         window.print()
+
+                                        //hiding body
+                                        document.getElementById("warn").classList.add("print:flex")
+                                        document.getElementById("warn").classList.remove("print:hidden")
+                                        document.getElementById("mainParent").classList.add("print:hidden")
+
                                     }}>Download</button>
+
+                                <button className="px-6 py-2 bg-green-500 text-white w-[250px] ml-8
+                                print:hidden" onClick={() => {
+                                        document.getElementById("amountlabel").innerText = "Amount"
+                                    }}>Amount</button>
+
                             </div>
                         </div>
                     </div>
