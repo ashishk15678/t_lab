@@ -113,7 +113,12 @@ export function AllItems({ }) {
         <div className="ml-16 ">
             <label className="text-xl font-extrabold">Total</label>
             <label className="text-xl font-bold p-2 ml-20">
-                <label id="amountlabel"></label>
+                <label id="amountlabel">
+                    <input type="text" accept="number" id="Discount" className="text-xl font-bold
+                                   border-1 border-gray-400 rounded-md  p-2"
+                        placeholder="Total Amount" />
+
+                </label>
             </label>
             <br />
 
@@ -142,10 +147,6 @@ export function AllItems({ }) {
 
                 }}>Download</button>
 
-            <button className="px-6 py-2 bg-green-500 text-white w-[250px] ml-8
-                                print:hidden" onClick={() => {
-                    document.getElementById("amountlabel").innerText = "Amount"
-                }}>Amount</button>
 
         </div>
 
