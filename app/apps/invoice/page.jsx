@@ -38,7 +38,7 @@ export default function Page() {
             </div>
 
             <div className="w-full h-full bg-gray-100/50 flex items-center justify-center
-            print:hidden lg:ml-0 md:ml-0 ml-12 print:ml-0" id="mainParent">
+            print:hidden lg:ml-0 md:ml-0 ml-20 print:ml-0" id="mainParent">
 
                 <div className="lg:w-[1300px] md:w-[700px] w-[700px] bg-white mt-6 border-1 border-white
          h-[100vh] box-shadow my-invoice">
@@ -199,7 +199,7 @@ export default function Page() {
                         <div className="mx-6">
 
                             <div className="bg-gray-200/80 border-2 border-gray-300
-                             h-10 w-full lg:text-xl text-sm font-extrabold">
+                             h-10 w-full lg:text-xl text-sm font-extrabold ml-8">
                                 <div className="p-2 ">
                                     <label className="ml-6">Sr no.</label>
                                     <label className="ml-6 print:ml-[150px]

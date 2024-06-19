@@ -12,7 +12,7 @@ export default function Items({ id, description, qty, rate, arr }) {
     return (
         <>
             <div className="mt-1 w-full lg:text-xl md:text-md text-sm font-serif border-2 border-gray-300
-              ">
+              ml-8">
                 <div className="bg-gray-100/90 text-gray-600  flex flex-row
                 print:bg-none">
 
@@ -90,7 +90,7 @@ export function AllItems({ }) {
         </div>
         <div>
             <button className="w-8 h-8  bg-green-400 text-white text-3xl rounded-sm flex items-center   
-                                justify-center print:hidden "
+                                justify-center print:hidden ml-12"
                 onClick={() => {
                     setItems(items.concat({ id: count + 1, description: "", qty: 0, rate: 0 }))
                     setCount(count + 1)
@@ -98,9 +98,9 @@ export function AllItems({ }) {
             >+</button>
         </div>
 
-        <div className="h-1 w-full bg-gray-200
+        <div className="h-1 w-full bg-gray-200 
         print:bg-none    mt-2 text-gray-500 "></div>
-        <div className="ml-8 ">
+        <div className="ml-16 ">
             <label className="text-xl font-extrabold">Total</label>
             <label className="text-xl font-bold p-2 ml-20">
                 <label id="amountlabel"></label>
