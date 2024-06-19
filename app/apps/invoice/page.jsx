@@ -32,13 +32,13 @@ export default function Page() {
     return (
         <>
             <title>Invoice</title>
-
+            {/* 
             <div className="hidden print:flex print:absolute" id="warn">
                 <h1>WELP , SMART!!</h1>
-            </div>
+            </div> */}
 
             <div className="w-full h-full bg-gray-100/50 flex items-center justify-center
-            print:hidden lg:ml-0 md:ml-0 ml-20 print:ml-0" id="mainParent">
+         lg:ml-0 md:ml-0 ml-20 print:ml-0" id="mainParent">
 
                 <div className="lg:w-[1300px] md:w-[700px] w-[700px] bg-white mt-6 border-1 border-white
          h-[100vh] box-shadow my-invoice">
@@ -219,17 +219,17 @@ export default function Page() {
                                     onClick={() => {
 
                                         // showing body
-                                        document.getElementById("warn").classList.remove("print:flex")
-                                        document.getElementById("warn").classList.add("print:hidden")
-                                        document.getElementById("mainParent").classList.remove("print:hidden")
+                                        // document.getElementById("warn").classList.remove("print:flex")
+                                        // document.getElementById("warn").classList.add("print:hidden")
+                                        // document.getElementById("mainParent").classList.remove("print:hidden")
 
                                         //print
                                         window.print()
 
                                         //hiding body
-                                        document.getElementById("warn").classList.add("print:flex")
-                                        document.getElementById("warn").classList.remove("print:hidden")
-                                        document.getElementById("mainParent").classList.add("print:hidden")
+                                        // document.getElementById("warn").classList.add("print:flex")
+                                        // document.getElementById("warn").classList.remove("print:hidden")
+                                        // document.getElementById("mainParent").classList.add("print:hidden")
 
                                     }}>Download</button>
 
