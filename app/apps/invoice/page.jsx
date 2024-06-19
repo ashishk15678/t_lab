@@ -38,22 +38,23 @@ export default function Page() {
             </div>
 
             <div className="w-full h-full bg-gray-100/50 flex items-center justify-center
-            print:hidden " id="mainParent">
+            print:hidden lg:ml-0 md:ml-0 ml-12 print:ml-0" id="mainParent">
 
-                <div className="lg:w-[1300px] md:w-[700px] w-[600px] bg-white mt-6 border-1 border-white
+                <div className="lg:w-[1300px] md:w-[700px] w-[700px] bg-white mt-6 border-1 border-white
          h-[100vh] box-shadow my-invoice">
 
-                    <div className="flex flex-col">
+                    <div className="flex flex-col w-full ml-8">
 
 
-                        <div className="w-full flex lg:flex-row md:flex-row flex-col invoice-parent ">
+                        <div className="w-full flex lg:flex-row md:flex-row flex-col invoice-parent
+                        ml-10 ">
 
 
-                            <div className="lg:w-[250px] md:w-[200px] w-[150px] lg:h-14 md:h-24 h-20 
+                            <div className="lg:w-[250px] md:w-[200px] w-[75px] lg:h-14 md:h-24 h-20 
                              border-dotted border-gray-200 lg:text-xl md:text-xl text-md lg:font-extrabold 
                              font-semibold 
                             text-gray-300/90
-         border-2 mt-12 ml-16 bg-gray-100/80 invoice-abc ">
+         border-2 mt-12 bg-gray-100/80 invoice-abc ">
 
                                 <input type="file" hidden id="CustomFile" onChange={(e) => {
                                     const file = e.target.files[0]
@@ -91,7 +92,7 @@ export default function Page() {
                              w-[145px] 
                             font-extrabold lg:h-12 md:h-9 h-8
                             text-gray-600/80 border-2 sm:h-8 
-                             border-gray-200/90 lg:ml-[60vh] md:ml-[23vh] ml-[65px] outline-0 focus:outline-0
+                             border-gray-200/90 lg:ml-[60vh] md:ml-[23vh] ml-[0px] outline-0 focus:outline-0
                               invoice-label" >
                                     <input type="text" value={invoice} className="focus:border-0 invoice-label print:text-[4rem]
                                     "
@@ -101,7 +102,7 @@ export default function Page() {
                                     />
                                 </div>
 
-                                <div className="flex flex-col mt-3  lg:ml-[60vh] md:ml-[210px] ml-[60px]                             w-[145px] items-center text-gray-600 invoice-number-label ">
+                                <div className="flex flex-col mt-3  lg:ml-[60vh] md:ml-[210px] ml-[0px]                             w-[145px] items-center text-gray-600 invoice-number-label ">
 
                                     <div className="lg:text-3xl md:text-2xl text-xl flex flex-row border-2 border-gray-300/50
                                 lg:w-[215px] md:w-[170px] w-[150px] md:ml-2 lg:ml-2 ml-0 font-extrabold print:border-none
@@ -141,7 +142,7 @@ export default function Page() {
 
 
                                 <div className="flex lg:flex-row md:flex-row flex-row mt-10
-                                w-[225px] ml-8 inputBtn  gap-x-20" >
+                                w-[225px] ml-8 inputBtn " >
 
 
 
@@ -198,12 +199,12 @@ export default function Page() {
                         <div className="mx-6">
 
                             <div className="bg-gray-200/80 border-2 border-gray-300
-                             h-10 w-full lg:text-xl text-md font-extrabold">
+                             h-10 w-full lg:text-xl text-sm font-extrabold">
                                 <div className="p-2 ">
-                                    <label>Sr no.</label>
-                                    <label className="ml-10 print:ml-[150px]
+                                    <label className="ml-6">Sr no.</label>
+                                    <label className="ml-6 print:ml-[150px]
                                       lg:ml-[175px]">Description</label>
-                                    <label className=" ml-[80px] md:ml-[150px] print:ml-[145px] lg:ml-[275px]">Rate</label>
+                                    <label className=" ml-[20px] md:ml-[150px] print:ml-[145px] lg:ml-[275px]">Rate</label>
                                     <label className="ml-10 md:ml-16 lg:ml-[220px]">Quantity</label>
                                     <label className="ml-16 lg:ml-[120px] ">Amount</label>
                                 </div>

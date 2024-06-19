@@ -38,7 +38,7 @@ export default function Switcher() {
 
 export const origin = "http://localhost:3000"
 
-export function Switcherbtn({ name, link, isActive, comp }: 
+export function Switcherbtn({ name, link, isActive, comp }:
     { name: string, link: string, isActive: boolean, comp: any }) {
     return (
         <>
@@ -46,7 +46,7 @@ export function Switcherbtn({ name, link, isActive, comp }:
             <Link href={link} className="lg:w-full md:w-full w-16 lg:ml-0 md-ml-0 sm-ml-10 flex
                     justify-center items-center my-2 text-2xl">
                 <div className="w-full rounded-md  h-16 flex items-center justify-center text-xl
-                text-white/60 hover:text-white/90 focus:text-white/90   ">
+                text-white/60 hover:text-white/90 focus:text-white/90   " aria-label={name}>
 
                     {comp}
 

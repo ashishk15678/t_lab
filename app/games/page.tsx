@@ -1,8 +1,8 @@
-export default function Page(){
+export default function Page() {
     return (
         <>
-<title>Tron-Games</title>
-        games
+            <title>Tron-Games</title>
+
         </>
     )
 }

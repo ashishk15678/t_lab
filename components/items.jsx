@@ -11,19 +11,19 @@ export default function Items({ id, description, qty, rate, arr }) {
     console.log(arr);
     return (
         <>
-            <div className="mt-1 w-full lg:text-xl text-md font-serif border-2 border-gray-300
+            <div className="mt-1 w-full lg:text-xl md:text-md text-sm font-serif border-2 border-gray-300
               ">
-                <div className="bg-gray-100/90 text-gray-600 w-full flex flex-row
+                <div className="bg-gray-100/90 text-gray-600  flex flex-row
                 print:bg-none">
 
                     <div>
                         <input type="text" accept="number" size={4} value={Id} className="lg:ml-4 print:ml-2 
-                        ml-2 bg-slate-200/60 print:bg-none"  />
+                        ml-8  bg-slate-200/60 print:bg-none"  />
                     </div>
 
                     <div className="">
                         <input type="text" accept="text" value={Desccription} size={12} className="lg:ml-[150px]
-                         ml-[25px] bg-slate-200/60 print:ml-[120px] print:bg-none"
+                         ml-[5px] bg-slate-200/60 print:ml-[120px] print:bg-none"
                             placeholder="Item Description"
                             onChange={(e) => {
                                 arr.description = e.target.value
@@ -35,7 +35,7 @@ export default function Items({ id, description, qty, rate, arr }) {
 
                     <div className="md:ml-12">
                         <input type="text" accept="number" required value={Rate} size={8} className="lg:ml-[175px]
- md:ml-[76px]                        print:ml-[150px] ml-[40px] bg-slate-200/60 bg-none"
+ md:ml-[76px]                        print:ml-[150px] ml-[20px] bg-slate-200/60 bg-none"
                             onChange={(e) => {
                                 setRate(e.target.value)
                             }}

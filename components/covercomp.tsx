@@ -7,7 +7,7 @@ export default function CoverComp({ name, link, id, image }:
         <>
             <Link href={`/apps/${link}`} className="top-[200px] 
                 left-[190px]  ">
-                <div className="lg:w-[35    0px] w-[300px] md:w-[250px]  lg:h-[220px] h-[220px]
+                <div className="lg:w-[350px] w-[300px] md:w-[250px]  lg:h-[220px] h-[220px]
                  md:h-[170px] rounded-md flex "
                 >
                     <div className="coverDiv w-full h-full " >
