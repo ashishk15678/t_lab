@@ -105,7 +105,7 @@ export default function Page() {
                                 <div className="flex flex-col mt-3  lg:ml-[60vh] md:ml-[210px] ml-[0px]                             w-[145px] items-center text-gray-600 invoice-number-label ">
 
                                     <div className="lg:text-3xl md:text-2xl text-xl flex flex-row border-2 border-gray-300/50
-                                lg:w-[215px] md:w-[170px] w-[150px] md:ml-2 lg:ml-2 ml-0 font-extrabold print:border-none
+                                lg:w-[215px] md:w-[170px] w-[190px] md:ml-2 lg:ml-2 ml-0 font-extrabold print:border-none
                                 ">
                                         <p className="ml-2">#</p>
                                         <input type="text" accept="number" size={8} className="px-0  text-xl outline-none 
@@ -113,12 +113,12 @@ export default function Page() {
                                     </div>
 
                                     <div className="right-8 flex flex-col print:flex-row
-                                     text-gray-500/90 w-[150px] ml-0 mt-1
-                                    print:ml-4   print:mt-4
+                                     text-gray-500/90 w-[195px] mt-1
+                                     print:mt-4
                                 "  >
                                         <label htmlFor="datedata" className="text-xl font-extrabold">Date</label>
                                         <input type="date" className=" border-2 border-gray-400/60 rounded-md 
-                                    text-xl p-2 print:p-0 print:ml-2 dateclass  "
+                                    text-xl p-2 print:p-0 print:ml-0 dateclass  "
                                             id="datedata" />
                                     </div>
 
